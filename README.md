@@ -1,8 +1,7 @@
-# 🏛️ Cabinet d'Avocats – Intégration Web Haute Performance
+#  Intégration Web Haute Performance
 
-<img src="assets/photo.jpg" alt="Hero Cabinet d'Avocats" style="border-radius:12px; width:100%; max-width:1200px; height:auto; box-shadow:0 0 20px; display:block; margin:0 auto 30px;">
 
-> **Intégration HTML/CSS/JS Vanilla** d’une maquette moderne et élégante pour un cabinet d’avocats  
+> **Intégration HTML/CSS/JS Vanilla** d’une maquette moderne et élégante  
 > Prête à être convertie en thème WordPress sur-mesure
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/HTML)
