@@ -53,6 +53,7 @@ Classes CSS **descriptives et modulaires** (BEM-like) → zéro conflit avec Gut
 
 ## 📂 Structure du projet
 cabinet-avocats-integration/
+
 ├── index.html          # Page complète, sémantique et SEO-friendly
 ├── style.css           # Tous les styles (desktop-first + media queries)
 ├── script.js           # Gestion du panneau coulissant et interactions
