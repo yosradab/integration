@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cabinet d'avocats spécialisé en droit de la communication et des marques.">
+    <title>Cabinet Avocats - Intégration</title>
+    
+    <!-- Import de la police IBM Plex Serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Lien vers la feuille de style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        
+        <!-- SECTION GAUCHE -->
+        <main class="left-column">
+            <header>
+                <a href="#" class="lang-btn">English Version</a>
+            </header>
+
+            <h1>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna</h1>
+
+            <!-- MENU NAVIGATION -->
+            <ul class="nav-list">
+                
+                <li class="nav-item">
+                    <!-- data-target relie le bouton à l'ID du contenu à afficher -->
+                    <button class="nav-btn" data-target="content-expertises">
+                        <span>Expertises</span>
+                        <span class="icon-arrow"></span>
+                    </button>
+                </li>
+
+                <li class="nav-item">
+                    <button class="nav-btn" data-target="content-equipe">
+                        <span>L'Équipe</span>
+                        <span class="icon-arrow"></span>
+                    </button>
+                </li>
+
+                <li class="nav-item">
+                    <button class="nav-btn" data-target="content-actualites">
+                        <span>Actualités</span>
+                        <span class="icon-arrow"></span>
+                    </button>
+                </li>
+                
+                <li class="nav-item">
+                    <button class="nav-btn" data-target="content-contact">
+                        <span>Contact</span>
+                        <span class="icon-arrow"></span>
+                    </button>
+                </li>
+
+            </ul>
+            
+            
+            <img src="photo.png" onerror="this.src='photo.jpg'" alt="Image de l'équipe du cabinet" class="hero-img">
+            
+            <!-- FOOTER PRINCIPAL -->
+            <footer class="main-footer">
+                
+                <div class="footer-column footer-address">
+                    <div class="address-box">
+                        <p>Adresse,Paris</p>
+                    </div>
+                </div>
+
+                <div class="footer-column footer-contact">
+                    <span class="icon-circle">C</span>
+                    <p>Contact</p>
+                </div>
+                
+                <div class="footer-column footer-mentions">
+                    <span class="icon-circle">M</span>
+                    <p>Mentions légales</p>
+                </div>
+
+                <div class="footer-right">
+                    <div class="newsletter-section">
+                        <h4>Abonnez-vous à la newsletter</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Votre email" class="newsletter-input">
+                            <button type="submit" class="newsletter-btn">OK</button>
+                        </form>
+                        <p class="newsletter-info">Vous recevrez des actualités du droit...</p>
+                    </div>
+
+                    <div class="footer-icons">
+                        <img src="https://flagcdn.com/w20/fr.png" srcset="https://flagcdn.com/w40/fr.png 2x" alt="Drapeau français" class="flag-icon">
+                        <span class="linkedin-icon">in</span>
+                    </div>
+                </div>
+
+            </footer>
+            
+        </main>
+        
+        <!-- VOLET DROIT (PANEL) -->
+        <aside class="right-panel" id="rightPanel">
+            
+            <!-- CONTENU 1 : EXPERTISES -->
+            <div id="content-expertises" class="panel-content">
+                <h2 class="panel-title">Expertises <span class="close-panel-icon"></span></h2>
+                <ul class="sub-menu">
+                    <li class="sub-menu-item">Droit de la communication <span class="icon-plus"></span></li>
+                    <li class="sub-menu-item">Droit des marques <span class="icon-plus"></span></li>
+                    <li class="sub-menu-item">Droit des dessins et modèles <span class="icon-plus"></span></li>
+                    <li class="sub-menu-item">Contentieux commercial <span class="icon-plus"></span></li>
+                </ul>
+            </div>
+
+            <!-- CONTENU 2 : EQUIPE (Exemple) -->
+            <div id="content-equipe" class="panel-content">
+                <h2 class="panel-title">L'Équipe <span class="close-panel-icon"></span></h2>
+                <p>Présentation des associés et collaborateurs...</p>
+            </div>
+
+            <!-- CONTENU 3 : ACTUS -->
+            <div id="content-actualites" class="panel-content">
+                <h2 class="panel-title">Actualités <span class="close-panel-icon"></span></h2>
+                <p>Dernières publications juridiques...</p>
+            </div>
+
+            <!-- CONTENU 4 : CONTACT -->
+            <div id="content-contact" class="panel-content">
+                <h2 class="panel-title">Contact <span class="close-panel-icon"></span></h2>
+                <p>Formulaire de contact et accès...</p>
+            </div>
+
+        </aside>
+
+    </div>
+
+    <!-- Lien vers le script JS -->
+    <script src="script.js"></script>
+</body>
+</html>
