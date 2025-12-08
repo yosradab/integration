@@ -55,10 +55,14 @@ Classes CSS **descriptives et modulaires** (BEM-like) → zéro conflit avec Gut
 cabinet-avocats-integration/
 
 ├── index.html          # Page complète, sémantique et SEO-friendly
+
 ├── style.css           # Tous les styles (desktop-first + media queries)
+
 ├── script.js           # Gestion du panneau coulissant et interactions
+
 └── assets/
-└── photo.jpg       # Image hero (à remplacer par vos visuels)
+
+└── photo.jpg       
 ## 🛠️ Comment tester localement
 
 ```bash
