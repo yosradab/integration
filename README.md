@@ -1,59 +1,73 @@
-🇫🇷 INTÉGRATION WEB : 
+# 🏛️ Cabinet d'Avocats – Intégration Web Haute Performance
 
-Ce dépôt contient l'intégration HTML, CSS et JavaScript d'une maquette .
+<img src="assets/photo.jpg" alt="Hero Cabinet d'Avocats" style="border-radius:12px; width:100%; max-width:1200px; height:auto; box-shadow:0 0 20px; display:block; margin:0 auto 30px;">
 
-Le code est conçu pour être Vanilla (sans framework CSS ou JS lourd) afin d'assurer une performance et une flexibilité maximales lors de la conversion ultérieure en thème WordPress.
+> **Intégration HTML/CSS/JS Vanilla** d’une maquette moderne et élégante pour un cabinet d’avocats  
+> Prête à être convertie en thème WordPress sur-mesure
 
-🎯 Objectifs Principaux
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/fr/docs/Web/JavaScript)
+[![Responsive](https://img.shields.io/badge/Responsive-✓-success?style=flat)](#)
+[![SEO Friendly](https://img.shields.io/badge/SEO-Friendly-brightgreen)](#)
+[![WCAG Ready](https://img.shields.io/badge/Accessibilité-WCAG%202.1-blue)](#)
 
-Intégration Pure : Utilisation exclusive de HTML, CSS et JS.
+## 🎯 Objectifs du projet
 
-Design Responsive : Adaptation fluide sur Desktop, Tablette et Mobile.
+- Intégration **100% Vanilla** (aucun framework CSS/JS lourd type Bootstrap ou Alpine.js)
+- Performance optimale et chargement ultra-rapide
+- Design **entièrement responsive** (Desktop → Tablette → Mobile)
+- Navigation innovante avec **volet coulissant latéral** (desktop) → **bottom sheet** (mobile)
+- Code structuré et commenté pour une conversion fluide en **thème WordPress**
 
-Interactivité : Mise en œuvre de la navigation à volet coulissant (sliding panel).
+## ✨ Fonctionnalités clés
 
-SEO & Accessibilité : Utilisation de balises sémantiques et de structure optimisée.
+### 1. Navigation à volet coulissant intelligent
 
-📂 Structure du Projet
+- Clique sur un item du menu de gauche → ouverture fluide du panneau de droite
+- Gestion parfaite de l’état actif (classe `.active` sur le lien)
+- **Adaptation automatique au device** :
+  - **Desktop & Tablette** : panneau latéral fixe (largeur 50% → 100% selon écran)
+  - **Mobile (< 768px)** : panneau qui monte depuis le bas (`80vh`, `border-radius` en haut)
 
+### 2. Responsive Design avancé
+
+| Breakpoint         | Adaptations principales                                      |
+|-------------------|---------------------------------------------------------------|
+| `≤ 1200px`         | Passage en layout tablette, ajustement des marges et typographies |
+| `≤ 768px`          | Tout en colonne, menu burger, contenu en colonne unique, footer réorganisé |
+| `≤ 480px`          | Optimisations extrêmes pour très petits écrans                |
+
+### 3. Prêt pour WordPress
+
+Le code est découpé de façon logique pour une intégration directe :
+
+| Fichier HTML       | Destination WordPress |
+|----------------------------|-----------------------------------|
+| `<header>` + menu          | `header.php`                      |
+| Contenu principal          | `page.php`, `front-page.php` ou `template-parts/content.php` |
+| Pied de page               | `footer.php`                      |
+| Styles                     | `style.css` du thème + files queued |
+| Scripts                    | enqueued dans `functions.php`     |
+
+Classes CSS **descriptives et modulaires** (BEM-like) → zéro conflit avec Gutenberg ou plugins.
+
+## 📂 Structure du projet
 cabinet-avocats-integration/
-├── index.html          # Structure principale (sémantique, SEO)
-├── style.css           # Styles complets (desktop + media queries)
-├── script.js           # Gestion de l'interactivité des menus
+├── index.html          # Page complète, sémantique et SEO-friendly
+├── style.css           # Tous les styles (desktop-first + media queries)
+├── script.js           # Gestion du panneau coulissant et interactions
 └── assets/
-    └── photo.jpg       # Image Hero
+└── photo.jpg       # Image hero (à remplacer par vos visuels)
+## 🛠️ Comment tester localement
 
+```bash
+# 1. Clone le dépôt
+git clone [https://github.com/yosradab/integration.git]
 
-✨ Fonctionnalités Clés
-
-1. Navigation Interactive (Volet Coulissant)
-
-Le menu de gauche (.nav-list) déclenche l'ouverture du volet de droite (.right-panel).
-
-Ouverture/Fermeture : Gérée via le script script.js qui ajoute/retire la classe .open au volet et la classe .active au bouton cliqué.
-
-Mode Responsive :
-
-Sur Desktop/Tablette : Le volet s'ouvre en largeur sur la droite.
-
-Sur Mobile (< 768px) : Le volet s'ouvre en hauteur, à partir du bas de l'écran (80% de 80vh), pour garantir une bonne lisibilité sur les petits écrans.
-
-2. Design et Responsive
-
-L'intégralité du design, y compris les effets de survol (:hover) et les icônes (flèches, plus/moins), est réalisée en CSS pur.
-
-Breakpoints CSS :
-
-@media (max-width: 1200px) : Optimisation pour tablettes.
-
-@media (max-width: 768px) : Optimisation pour mobiles (changement de disposition en colonne pour le contenu et le pied de page).
-
-Pied de Page (.main-footer) : Le pied de page est entièrement réorganisé en mode colonne sur mobile pour maintenir la clarté de l'information (adresse, contact, newsletter).
-
-3. Optimisation pour WordPress
-
-L'intégration a été pensée pour faciliter la transition vers un thème WordPress :
-
-Isolation Logique : Le code est segmenté logiquement : le contenu principal (dans index.html) peut être inséré dans page.php ou single.php, le <header> dans header.php, et le pied de page (.main-footer) dans footer.php.
-
-Classes Claires : Les classes CSS sont descriptives et modulaires pour éviter les conflits avec des styles WordPress existants.
+# 2. Ouvre simplement index.html dans ton navigateur
+open index.html   # macOS
+start index.html   # Windows
+xdg-open index.html # Linux
+👨‍💻 Auteur
+Yosra Dab – Développeuse Front-end & Intégrateur WordPress
