@@ -1,77 +1,63 @@
-#  Intégration Web Haute Performance
+# Intégration Web — Site d'un cabinet d'avocats (HTML / CSS / JS Vanilla)
 
+Intégration **HTML, CSS et JavaScript vanilla** d'une maquette de site pour un cabinet d'avocats, sans framework. Le code est découpé pour être facilement converti en **thème WordPress** sur mesure.
 
-> **Intégration HTML/CSS/JS Vanilla** d’une maquette moderne et élégante  
-> Prête à être convertie en thème WordPress sur-mesure
+## Objectifs
 
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/fr/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/fr/docs/Web/JavaScript)
-[![Responsive](https://img.shields.io/badge/Responsive-✓-success?style=flat)](#)
-[![SEO Friendly](https://img.shields.io/badge/SEO-Friendly-brightgreen)](#)
-[![WCAG Ready](https://img.shields.io/badge/Accessibilité-WCAG%202.1-blue)](#)
+- Intégration **100 % vanilla** : pas de Bootstrap, pas de framework JS
+- Chargement rapide et code léger
+- Design **entièrement responsive** (desktop → tablette → mobile)
+- Navigation originale à **volet coulissant**
+- Code structuré et commenté pour une conversion simple en thème WordPress
 
-## 🎯 Objectifs du projet
+## Fonctionnalités
 
-- Intégration **100% Vanilla** (aucun framework CSS/JS lourd type Bootstrap ou Alpine.js)
-- Performance optimale et chargement ultra-rapide
-- Design **entièrement responsive** (Desktop → Tablette → Mobile)
-- Navigation innovante avec **volet coulissant latéral** (desktop) → **bottom sheet** (mobile)
-- Code structuré et commenté pour une conversion fluide en **thème WordPress**
+### Navigation à volet coulissant
+- Un clic sur un élément du menu de gauche ouvre le panneau de droite avec une transition fluide
+- Gestion de l'état actif (classe `.active` sur le lien)
+- Adaptation au support :
+  - **Desktop et tablette** : panneau latéral fixe (50 % à 100 % de la largeur selon l'écran)
+  - **Mobile (< 768 px)** : panneau qui monte depuis le bas (*bottom sheet*, `80vh`, coins arrondis)
 
-## ✨ Fonctionnalités clés
+### Responsive
 
-### 1. Navigation à volet coulissant intelligent
+| Breakpoint | Adaptations |
+|---|---|
+| `≤ 1200px` | Passage en mise en page tablette, ajustement des marges et de la typographie |
+| `≤ 768px` | Contenu sur une colonne, menu burger, pied de page réorganisé |
+| `≤ 480px` | Optimisations pour les très petits écrans |
 
-- Clique sur un item du menu de gauche → ouverture fluide du panneau de droite
-- Gestion parfaite de l’état actif (classe `.active` sur le lien)
-- **Adaptation automatique au device** :
-  - **Desktop & Tablette** : panneau latéral fixe (largeur 50% → 100% selon écran)
-  - **Mobile (< 768px)** : panneau qui monte depuis le bas (`80vh`, `border-radius` en haut)
+### Prêt pour WordPress
 
-### 2. Responsive Design avancé
+| Partie HTML | Fichier WordPress |
+|---|---|
+| `<header>` + menu | `header.php` |
+| Contenu principal | `page.php`, `front-page.php` ou `template-parts/content.php` |
+| Pied de page | `footer.php` |
+| Styles | `style.css` du thème |
+| Scripts | chargés via `wp_enqueue_script` dans `functions.php` |
 
-| Breakpoint         | Adaptations principales                                      |
-|-------------------|---------------------------------------------------------------|
-| `≤ 1200px`         | Passage en layout tablette, ajustement des marges et typographies |
-| `≤ 768px`          | Tout en colonne, menu burger, contenu en colonne unique, footer réorganisé |
-| `≤ 480px`          | Optimisations extrêmes pour très petits écrans                |
+Les classes CSS sont descriptives et modulaires (proches de BEM), pour éviter les conflits avec Gutenberg et les plugins.
 
-### 3. Prêt pour WordPress
+## Structure
 
-Le code est découpé de façon logique pour une intégration directe :
+```
+integration/
+├── index.html   # Page complète, sémantique et optimisée SEO
+├── style.css    # Styles (desktop-first + media queries)
+├── script.js    # Volet coulissant et interactions
+└── photo.png    # Image de la maquette
+```
 
-| Fichier HTML       | Destination WordPress |
-|----------------------------|-----------------------------------|
-| `<header>` + menu          | `header.php`                      |
-| Contenu principal          | `page.php`, `front-page.php` ou `template-parts/content.php` |
-| Pied de page               | `footer.php`                      |
-| Styles                     | `style.css` du thème + files queued |
-| Scripts                    | enqueued dans `functions.php`     |
-
-Classes CSS **descriptives et modulaires** (BEM-like) → zéro conflit avec Gutenberg ou plugins.
-
-## 📂 Structure du projet
-cabinet-avocats-integration/
-
-├── index.html          # Page complète, sémantique et SEO-friendly
-
-├── style.css           # Tous les styles (desktop-first + media queries)
-
-├── script.js           # Gestion du panneau coulissant et interactions
-
-└── assets/
-
-└── photo.jpg       
-## 🛠️ Comment tester localement
+## Tester en local
 
 ```bash
-# 1. Clone le dépôt
-git clone [https://github.com/yosradab/integration.git]
+git clone https://github.com/yosradab/integration.git
+cd integration
+```
 
-# 2. Ouvre simplement index.html dans ton navigateur
-open index.html   # macOS
-start index.html   # Windows
-xdg-open index.html # Linux
-👨‍💻 Auteur
-Yosra Dab – Développeuse Front-end & Intégrateur WordPress
+Puis ouvrir `index.html` dans un navigateur (aucune installation nécessaire).
+
+## Auteur
+
+**Yosra Dab** — Ingénieure logiciel Full Stack · [Portfolio](https://yosradab.vercel.app) · [GitHub](https://github.com/yosradab) · [LinkedIn](https://linkedin.com/in/yosradab)
